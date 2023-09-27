@@ -1,0 +1,99 @@
+body {
+    background: #f8d8a8;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: 100px;
+    margin-top: 0px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+#sp {
+    width: 30vw;
+    height: auto;
+    border: 5px solid #ff5733; /* Толщина и цвет рамки */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень */
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.text {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 50px;
+    word-spacing: 25px;
+    flex: 1;
+}
+
+.desc {
+    margin-top: 70px;
+    text-indent: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 30px;
+    word-spacing: 25px;
+    flex: 1;
+}
+
+#sp:hover {
+    border: 5px solid #48ff1a; /* Изменяем цвет фона при наведении */
+    cursor: pointer; /* Задаем стиль курсора при наведении на кнопку */
+}
+
+.buttons_org {
+    font-size: 60px;
+    display: inline-block;
+    padding: 10px 20px; /* Задаем отступы вокруг текста кнопки */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    background-color: #ff5733; /* Задаем цвет фона кнопки */
+    color: #fff; /* Задаем цвет текста на кнопке */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    cursor: pointer; /* Задаем стиль курсора при наведении на кнопку */
+    margin-right: 30px;
+}
+
+.buttons_back {
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px; /* Задаем отступы вокруг текста кнопки */
+    font-weight: bold;
+    text-align: right;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    background-color: #bb9289; /* Задаем цвет фона кнопки */
+    color: #000000; /* Задаем цвет текста на кнопке */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    cursor: pointer; /* Задаем стиль курсора при наведении на кнопку */
+}
+
+
+.buttons_org:hover {
+    background-color: #ff331a; /* Изменяем цвет фона при наведении */
+}
+
+.left {
+    flex: 1; /* Делаем левую часть растяжимой, чтобы занять все доступное пространство */
+}
+
+.right {
+    margin-left: 20px; /* Добавляем небольшой отступ между левой и правой частями */
+}

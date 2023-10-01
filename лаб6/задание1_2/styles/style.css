@@ -1,0 +1,82 @@
+h1 {
+    font-size: 80px;
+    text-align: center;
+    color: red;
+    margin-top: 80px;
+}
+
+p {
+    text-indent: 30px;
+}
+
+body {
+    background-color: black;
+}
+
+.pic_index_left {
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    height: 600px;
+    width: auto;
+}
+
+.pic_index_center {
+    align-items: center;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    height: 600px;
+    width: auto;
+}
+
+.pic_index_right {
+    float: right;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    height: 600px;
+    width: auto;
+}
+
+.text1 {
+    font-size: 45px;
+    color: whitesmoke;
+    margin-right: 30px;
+}
+
+.text1_right {
+    font-size: 45px;
+    color: whitesmoke;
+    text-align: right;
+    margin-right: 30px;
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #241414;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 45px;
+    padding: 14px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: black;
+    color: #f2f2f2;
+}

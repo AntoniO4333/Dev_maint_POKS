@@ -1,0 +1,85 @@
+body {
+    background-image: url('../pics/space.jpg'); /* Фон сайта - изображение Космоса */
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 300%;
+    text-align: center;
+    color: red;
+    margin-top: 60px;
+}
+
+p {
+    text-indent: 30px;
+}
+
+.pic_index_left {
+    float: left;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    height: 250px;
+    width: auto;
+}
+
+.pic_index_center {
+    align-items: center;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    height: 250px;
+    width: auto;
+}
+
+.pic_index_right {
+    float: right;
+    margin-left: 60px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    height: 250px;
+    width: auto;
+}
+
+.text1 {
+    font-size: 150%;
+    color: whitesmoke;
+    margin-right: 30px;
+}
+
+.text1_right {
+    font-size: 150%;
+    color: whitesmoke;
+    text-align: right;
+    margin-right: 30px;
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 150%;
+    padding: 14px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: blue;
+    color: #f2f2f2;
+}

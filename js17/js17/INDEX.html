@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>jQuery Tasks</title>
+</head>
+<body>
+
+<!-- Задание 1 -->
+<h2>Любимые киногерои</h2>
+<ul id="favoriteHeroes"></ul>
+
+<script>
+    // Любимые киногерои
+    var favoriteHeroes = ["Гарри Поттер", "Индиана Джонс", "Джеймс Бонд"];
+
+    $(document).ready(function () {
+        // Добавление киногероев в реальном времени
+        $.each(favoriteHeroes, function (index, hero) {
+            $('#favoriteHeroes').append('<li>' + hero + '</li>');
+        });
+    });
+</script>
+
+<!-- Задание 2 -->
+<h2>Ваш выбор: кино, книги, автомобили?</h2>
+<select id="userChoice">
+    <option value="movies">Кино</option>
+    <option value="books">Книги</option>
+    <option value="cars">Автомобили</option>
+</select>
+
+<button id="showFavorites">Показать любимое</button>
+
+<div id="favorites"></div>
+
+<!-- Дополнительные элементы для вывода изображений и четверостишия -->
+<div id="images"></div>
+<div id="poem"></div>
+
+<!-- Счетчик правильных строк в четверостишии -->
+<div id="correctLinesCounter">Правильно введено: 0 строк</div>
+
+<script>
+    // Любимые книги, кинофильмы и автомобили
+    var favorites = {
+        movies: ["Звездные войны", "Властелин колец", "Матрица"],
+        books: ["1984", "Убить пересмешника", "Мастер и Маргарита"],
+        cars: ["Tesla Model S", "BMW M5", "Audi R8"]
+    };
+
+    // Изображения для соответствующих избранных элементов
+    var images = {
+        movies: ["./Звездные_войны.png", "./Кинотрилогия_Властелин_Колец.png", "матрица.png"],
+        books: ["1984.png", "убить_пересмешника.png", "мастер_и_маргарита.png"],
+        cars: ["tesla.png", "bmv.png", "audi.png"]
+    };
+
+    // Четверостишие
+    var poem = [
+        "Береги планету, заботься о деревьях,",
+        "Люби животных, они твои друзья.",
+        "Сбереги воду, воздух, небеса,",
+        "Тогда на земле будет счастье всегда."
+    ];
+
+    // Вывод четверостишия по строчкам и подсчет правильных строк
+    var correctLinesCounter = 0;
+    $.each(poem, function (index, line) {
+        $('#poem').append('<p>' + line + '</p>');
+
+        // Подсчет правильных строк
+        if (index < 4 && line === poem[index]) {
+            correctLinesCounter++;
+        }
+    });
+
+    // Вывод счетчика правильных строк
+    $('#correctLinesCounter').text('Правильно введено: ' + correctLinesCounter + ' строки');
+
+    // Обработка события по нажатию на кнопку
+    $('#showFavorites').click(function () {
+        var userChoice = $('#userChoice').val();
+        var userFavorites = favorites[userChoice];
+        var userImages = images[userChoice];
+
+        // Очистка предыдущего вывода
+        $('#favorites').empty();
+        $('#images').empty();
+
+        // Вывод любимых элементов
+        $.each(userFavorites, function (index, item) {
+            $('#favorites').append('<p>' + item + '</p>');
+        });
+
+        // Вывод изображений
+        $.each(userImages, function (index, image) {
+            $('#images').append('<img src="' + image + '" alt="' + userFavorites[index] + '">');
+        });
+    });
+</script>
+
+</body>
+</html>

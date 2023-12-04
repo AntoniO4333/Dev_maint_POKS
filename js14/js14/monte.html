@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление числа "Пи" методом Монте-Карло</title>
+</head>
+<body>
+    <h1>Вычисление числа "Пи" методом Монте-Карло</h1>
+
+    <label for="precision">Выберите точность:</label>
+    <select id="precision">
+        <option value="1000">Низкая точность</option>
+        <option value="10000">Средняя точность</option>
+        <option value="100000">Высокая точность</option>
+    </select>
+
+    <button onclick="calculatePi()">Вычислить</button>
+
+    <p id="result">Результат: </p>
+
+    <script src="monte_script.js"></script>
+</body>
+</html>
